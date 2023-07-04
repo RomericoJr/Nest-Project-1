@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { TaskModule } from './task/task.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
+import { CursoModule } from './curso/curso.module';
+import { InstructorModule } from './instructor/instructor.module';
 
 
 @Module({
@@ -17,7 +19,7 @@ import { UserModule } from './user/user.module';
     database: 'projectnest',
     autoLoadEntities: true,
     synchronize: true
-  }), UserModule
+  }), UserModule, CursoModule, InstructorModule
   ],
   controllers: [AppController],
   providers: [AppService],
